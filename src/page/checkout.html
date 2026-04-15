@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marathon Store | Pago</title>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Fira+Sans+Extra+Condensed:wght@300;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo"><a href="../../index.html">MARATHON</a></div>
+        <div class="nav-links">
+            <a href="../../index.html">INICIO</a>
+            <a href="hombre.html">HOMBRE</a>
+            <a href="mujer.html">MUJER</a>
+            <a href="nino.html">NIÑOS</a>
+        </div>
+    </nav>
+
+    <main class="shop-layout" style="flex-direction: column; align-items: center;">
+        <section class="products-section" style="max-width: 600px;">
+            <h2 class="section-title">PASARELA DE <span class="highlight-blue">PAGO</span></h2>
+            <form id="payment-form" class="payment-form">
+                <div class="form-group">
+                    <label for="card-name">Nombre de la persona *</label>
+                    <input type="text" id="card-name" name="card-name" placeholder="Nombre completo" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="card-number">Número de tarjeta *</label>
+                    <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="card-expiry">Fecha de caducidad *</label>
+                        <input type="text" id="card-expiry" name="card-expiry" placeholder="MM/AA" maxlength="5" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="card-cvc">CVC *</label>
+                        <input type="text" id="card-cvc" name="card-cvc" placeholder="123" maxlength="3" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Dirección de entrega *</label>
+                    <input type="text" id="address" name="address" placeholder="Calle, número, ciudad" required>
+                </div>
+
+                <button type="submit" class="checkout-btn">CONFIRMAR COMPRA</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>INTEGRANTES DEL GRUPO</h4>
+                <div class="tech-stack">
+                    <div class="medium-row">
+                        <div class="mini-square neon-blue"></div>
+                    </div>
+                    <div class="medium-row">
+                        <div class="mini-square neon-red"></div>
+                        <span class="padded-label">HTML / CSS</span>
+                    </div>
+                </div>
+                <ul>
+                    <li><a href="#">Aguinsaca Brayan</a></li>
+                    <li><a href="#">Carrera Edwin</a></li>
+                    <li><a href="#">Maspu Andrés </a></li>
+                    <li><a href="#">Nuñez Paola</a></li>
+                    <li><a href="#">Ordóñez Jhosmar</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Instituto Superior Tecnológico Quito</h4>
+                <div class="countries">Proyecto Desarrollo Web 1</div>
+            </div>
+            <div class="footer-col payments">
+                <h4>MÉTODOS DE PAGO</h4>
+                <div class="payment-box">
+                    <div class="card-bg">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard">
+                    </div>
+                    <div class="card-bg">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>📍 Ecuador © 2026 Marathon</p>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script/checkout.js"></script>
+</body>
+</html>

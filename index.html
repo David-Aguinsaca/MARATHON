@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marathon Store | Futurista</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Fira+Sans+Extra+Condensed:wght@300;700&family=Roboto+Condensed:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+            <a href="index.html">MARATHON</a>
+        </div>
+        <div class="nav-links">
+            <a href="src/page/hombre.html">HOMBRE</a>
+            <a href="src/page/mujer.html">MUJER</a>
+            <a href="src/page/nino.html">NIÑOS</a>
+        </div>
+        <div class="cart-container">
+            <div class="cart-icon" id="cart-icon">
+                🛒 <span id="cart-count">0</span>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <video autoplay loop muted playsinline class="back-video">
+            <source src="videos/banner.mp4" type="video/mp4">
+        </video>
+        <div class="overlay-video"></div>
+        <div class="hero-content">
+            <button class="btn-main" onclick="window.location.href='src/page/all-products.html'"
+                style="cursor:pointer;">VER COLECCIÓN</button>
+        </div>
+    </header>
+
+    <main class="shop-layout">
+
+        <aside class="filter-sidebar">
+            <div class="filter-group">
+                <h4 class="filter-title">ACTIVIDAD <i class="fa-solid fa-bolt"></i></h4>
+                <div class="filter-options">
+                    <label class="custom-check">Fútbol <input type="checkbox" data-filter-group="activity" data-value="futbol"><span
+                            class="checkmark"></span></label>
+                    <label class="custom-check">Entrenar <input type="checkbox" data-filter-group="activity" data-value="entrenar"><span
+                            class="checkmark"></span></label>
+                    <label class="custom-check">Running <input type="checkbox" data-filter-group="activity" data-value="running"><span
+                            class="checkmark"></span></label>
+                    <label class="custom-check">Lifestyle <input type="checkbox" data-filter-group="activity" data-value="lifestyle"><span
+                            class="checkmark"></span></label>
+                    <label class="custom-check">Casual <input type="checkbox" data-filter-group="activity" data-value="casual"><span
+                            class="checkmark"></span></label>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <h4 class="filter-title">LÍNEA <i class="fa-solid fa-microchip"></i></h4>
+                <div class="filter-options">
+                    <label class="custom-check">Camiseta <input type="checkbox" data-filter-group="line" data-value="camiseta"><span
+                            class="checkmark"></span></label>
+                    <label class="custom-check">Sudadera <input type="checkbox" data-filter-group="line" data-value="sudadera"><span
+                            class="checkmark"></span></label>
+                    <label class="custom-check">Shorts <input type="checkbox" data-filter-group="line" data-value="shorts"><span
+                            class="checkmark"></span></label>
+                    <label class="custom-check">Calzado <input type="checkbox" data-filter-group="line" data-value="calzado"><span
+                            class="checkmark"></span></label>
+                    <label class="custom-check">Pantalón <input type="checkbox" data-filter-group="line" data-value="pantalon"><span
+                            class="checkmark"></span></label>
+                </div>
+            </div>
+
+            
+
+        </aside>
+
+        <div class="main-content-wrapper">
+
+            <section class="categories-container">
+                <h2 class="section-title">Nuestras <span class="highlight-blue">Categorías</span></h2>
+                <div class="categories-grid" onclick="window.location.href='src/page/all-products.html'"
+                    style="cursor:pointer;">
+                    <div class="square"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=600"
+                            alt="1"><span>Calzado</span></div>
+                    <div class="square"><img
+                            src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=600"
+                            alt="2"><span>Selección</span></div>
+                    <div class="square"><img
+                            src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=600"
+                            alt="3"><span>Accesorios</span></div>
+                    <div class="square"><img
+                            src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=600"
+                            alt="4"><span>Equipamiento</span></div>
+                    <div class="square"><img
+                            src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?q=80&w=600"
+                            alt="5"><span>Running</span></div>
+                    <div class="square"><img
+                            src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=600"
+                            alt="6"><span>Entrenamiento</span></div>
+                </div>
+            </section>
+
+            <section class="products-section">
+                <h2 class="section-title">EN TEN<span class="highlight-blue">DENCIA </span></h2>
+                <div class="products-grid" id="trending-products"></div>
+            </section>
+
+            <section class="products-section second-row">
+                <h2 class="section-title">ESTILO QUE SE <span class="highlight-blue">MUEVE CONTIGO</span></h2>
+                <div class="brand-section">
+                    <div class="large row">
+                        <div class="square-brand"><img
+                                src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg" alt="Nike">
+                        </div>
+                        <div class="square-brand"><img
+                                src="https://upload.wikimedia.org/wikipedia/commons/2/20/Adidas_Logo.svg" alt="Adidas">
+                        </div>
+                        <div class="square-brand"><img
+                                src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Puma_complete_logo.svg"
+                                alt="Puma"></div>
+                        <div class="square-brand"><img
+                                src="https://upload.wikimedia.org/wikipedia/commons/b/b3/Under_Armour_logo.svg"
+                                alt="UA"></div>
+                    </div>
+                </div>
+
+                <div class="products-grid" id="movement-products"></div>
+            </section>
+        </div>
+    </main>
+
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="sidebar-header">
+            <h4>Tu carrito</h4>
+            <button class="close-cart" id="close-cart-btn" aria-label="Cerrar carrito">×</button>
+        </div>
+        <div id="cart-items" class="sidebar-items"></div>
+        <p class="cart-total">Total: $<span id="cart-total">0</span></p>
+        <a href="src/page/checkout.html" class="checkout-btn">Finalizar compra</a>
+    </div>
+    <div class="cart-overlay" id="cart-overlay"></div>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+    <div class="footer-col">
+        <h4>MARATHON STORE</h4>
+        <div class="countries">Tu estilo, tu ritmo, tu movimiento</div>
+        <ul>
+            <li><a href="src/page/hombre.html">Colección Hombre</a></li>
+            <li><a href="src/page/mujer.html">Colección Mujer</a></li>
+            <li><a href="src/page/nino.html">Colección Niños</a></li>
+            <li><a href="src/page/all-products.html">Todos los productos</a></li>
+        </ul>
+    </div>
+    <div class="footer-col">
+        <h4>COMPRA CON CONFIANZA</h4>
+        <ul>
+            <li><a href="#">Calzado deportivo</a></li>
+            <li><a href="#">Ropa urbana y training</a></li>
+            <li><a href="#">Nuevas tendencias</a></li>
+            <li><a href="#">Marcas destacadas</a></li>
+        </ul>
+    </div>
+</div>
+        
+            <div class="footer-col payments">
+                <h4>MÉTODOS DE PAGO</h4>
+                <div class="payment-box">
+                    <div class="card-bg">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg"
+                            alt="Mastercard">
+                    </div>
+                    <div class="card-bg">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Marathon Store Ecuador 2026 | Vive el deporte con estilo</p>
+            <div class="social-icons">
+                <a href="https://facebook.com/marathonsportsec/?locale=es_LA" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/marathon_ecuador/" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://youtube.com/@marathonsportsecu?si=xlzQyPvbwiEA_TCG" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="floating-whatsapp">
+            <a href="https://wa.me/593983533333" target="_blank" rel="noopener noreferrer" class="whatsapp-btn">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp">
+            </a>
+        </div>
+        </footer>
+
+    <script src="src/script/products-data.js"></script>
+    <script src="script.js"></script>   
+</body>
+
+</html>
