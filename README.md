@@ -31,13 +31,14 @@ Permite a los usuarios explorar productos, filtrarlos, agregarlos al carrito y s
 ## 📂 Estructura del proyecto
 /sportwear-store
 │
-├── /src
-│ └── page.js
-│ └── script.js
-├── /videos
 ├── index.html
-├── script.js
-├── styles.js
+├── /css
+│   └── styles.css
+├── /js
+│   └── app.js
+├── /assets
+│   ├── images/
+│   └── icons/
 └── README.md
 
 
